@@ -1,0 +1,65 @@
+.gridcontainer{
+  display: grid;
+  grid-template-areas:
+  'header'
+  'velkommen'
+  'picture1'
+  'picture2'
+  'picture3'
+  'navigation'
+}
+.main-head{
+  grid-area: header;
+  background-color: #00A8A0;
+  display: flex;
+  height: 16vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navi{
+  grid-area: navigation;
+  text-decoration: none;
+
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #00A8A0
+}
+.info{
+  grid-area: velkommen;
+  background-color: #00A8A0;
+
+}
+.presentate{
+  font-family: delicato, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 25px;
+  color: #F9F871;
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+}
+.picture1{
+  grid-area: picture1;
+
+}
+.picture2{
+  grid-area: picture2;
+}
+.picture3{
+  grid-area: picture3;
+}
+
+.footer{
+
+}
+.gridcontainer > div{
+
+}
+nav ul{
+  list-style: none;
+}
