@@ -9,6 +9,8 @@
   'header'
   'velkommen'
   'picture1'
+  'picture2'
+  'picture3'
   'navigation'
 }
 .main-head{
@@ -104,11 +106,22 @@ nav ul{
   align-items: center;
 }
 
-.firstpicture{
+.mypicture{
   height: auto;
   width: 100%;
 }
 
+.picture1{
+  grid-area:picture1;
+}
+
+.picture2{
+  grid-area:picture2;
+}
+
+.picture3{
+  grid-area:picture3;
+}
 .picturetekst{
   text-align: center;
   font-family: jaf-bernina-sans, sans-serif;
