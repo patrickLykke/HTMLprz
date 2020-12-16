@@ -1,18 +1,20 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #00A8A0;
+  background-color:#00CA99;
 }
 .gridcontainer{
   display: block;
   grid-template-areas:
   'header'
-  'velkommen'
+  'info'
   'picture1'
   'picture2'
   'picture3'
   'picture4'
   'picture5'
+  'picture6'
+  'footer'
   'navigation'
 }
 .main-head{
@@ -28,7 +30,6 @@
   color: #F9F871;
 }
 .frontlink{
-  grid-area:header;
   text-decoration: none;
   vertical-align: middle;
   font-family: jaf-bernina-sans, sans-serif;
@@ -36,7 +37,7 @@
   font-style: normal;
   color: #F9F871;
 }
-.nav{
+nav{
   grid-area: navigation;
 
 }
@@ -46,8 +47,8 @@
   bottom: 0;
   width: 100%;
   height: 6%;
-  padding-top: 6%
-
+  padding-top: 6%;
+  filter: drop-shadow(0px 0px 20px #F9F871);
 }
 .nav-link{
 text-decoration: none;
@@ -68,9 +69,7 @@ nav ul{
 
 }
 .info{
-  grid-area: velkommen;
-
-
+  grid-area: info;
 }
 .presentate{
   font-family: jaf-bernina-sans, sans-serif;
@@ -81,8 +80,9 @@ nav ul{
   text-align: center;
   padding: 1em 2em 1em 2em;
 }
+
 .sprite{
-  grid-area: picture1;
+  grid-area: picture2;
     width: 100%;
     height: 100vw;
     background: url(images/animationsnegl.png) 0 0 no-repeat;
@@ -99,7 +99,7 @@ nav ul{
   }
 
 .pictures{
-  height:270vw;
+  height:auto;
   width:100%;
   display: flex;
   flex-direction: column;
@@ -107,6 +107,7 @@ nav ul{
   align-items: center;
 }
 .aboutpicture{
+grid-area:picture1;
 background-color:#F9F871;
 height:100vw;
 width:100%;
@@ -152,7 +153,10 @@ align-items: center;
 }
 
 .picture5{
-  grid-area:picture5
+  grid-area:picture5;
+}
+.picture6{
+  grid-area:picture6;
 }
 
 .picturetekst{
@@ -162,31 +166,98 @@ align-items: center;
   font-style: normal;
   color: #F9F871;
   font-size: 16px;
-  padding-left: 6px;
+  padding-left: 10px;
   padding-right: 6px;
   padding-top: 6px;
-  padding-bottom: 6px;
+  padding-bottom: 10px;
 }
 
-.picturetekst1{
-  grid-area:picturetekst1
-}
+.kontakt{
+  text-align: center;
+  font-family: jaf-bernina-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #F9F871;
+  font-size: 16px;
 
-.picturetekst2{
-  grid-area:picturetekst2
 }
-
-.picturetekst3{
-  grid-area:picturetekst3
-}
-
-.picturetekst4{
-  grid-area:picturetekst4
-}
-
 .footer{
-
+  grid-area:footer;
+  width: 100%;
+  height: 6%;
+  padding-top: 6%;
+  padding-bottom: 22%;
 }
-.gridcontainer > div{
+@media screen and (min-width:768px) {
+.sprite{
+height: 500px;
+width: 500px;
+}
+}
+@media screen and (min-width:1024px) {
+  .gridcontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'header header header'
+    'info info info'
+    'picture1 picture2 picture3'
+    'picture4 picture5 picture6'
+    'footer footer footer'
+    'navigation navigation navigation'
+  }
+  .pictures{
+    height:auto;
+    width:100%;
+  }
 
+  .mypicture{
+    height: auto;
+    width: 30vw;
+  }
+
+  .navi{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    filter: drop-shadow(0px 0px 20px #F9F871);
+  }
+  .footer{
+    grid-area:footer;
+    width: 100%;
+    height: 6%;
+    padding-top: 6%;
+    padding-bottom: 8%;
+}
+  .sprite{
+  height: 500px;
+  width: 500px;
+  justify-content: center;
+}
+.aboutpicture{
+grid-area:picture2;
+background-color:#F9F871;
+height:40vw;
+width:100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.abouttekst{
+  grid-area:picture5;
+  text-align: center;
+  font-family: jaf-bernina-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #F9F871;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+}
 }
