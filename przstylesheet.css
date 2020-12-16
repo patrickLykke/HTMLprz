@@ -11,6 +11,8 @@
   'picture1'
   'picture2'
   'picture3'
+  'picture4'
+  'picture5'
   'navigation'
 }
 .main-head{
@@ -97,11 +99,11 @@ nav ul{
   }
 
 .pictures{
-  height:425vw;
+  height:270vw;
   width:100%;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
 }
 .aboutpicture{
@@ -144,6 +146,15 @@ align-items: center;
   grid-area:picture3;
 
 }
+
+.picture4{
+  grid-area:picture4;
+}
+
+.picture5{
+  grid-area:picture5
+}
+
 .picturetekst{
   text-align: center;
   font-family: jaf-bernina-sans, sans-serif;
@@ -151,8 +162,10 @@ align-items: center;
   font-style: normal;
   color: #F9F871;
   font-size: 16px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .picturetekst1{
@@ -165,6 +178,10 @@ align-items: center;
 
 .picturetekst3{
   grid-area:picturetekst3
+}
+
+.picturetekst4{
+  grid-area:picturetekst4
 }
 
 .footer{
